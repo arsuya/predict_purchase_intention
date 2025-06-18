@@ -71,6 +71,10 @@ def run():
         pred = model.predict(df)
         hasil = 'Akan Membeli' if pred[0] else 'Tidak Membeli'
         st.write(f"### Hasil Prediksi: **{hasil}**")
+        if hasil == 'Akan Membeli':
+            st.image("https://media.giphy.com/media/8xgqLTTgWqHWU/giphy.gif")
+        else:
+            st.image("https://media.giphy.com/media/6IGNW4wiyU8Mw/giphy.gif")
 
 if __name__ == '__main__':
     run()
